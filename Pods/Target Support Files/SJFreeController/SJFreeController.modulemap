@@ -1,0 +1,6 @@
+framework module SJFreeController {
+  umbrella header "SJFreeController-umbrella.h"
+
+  export *
+  module * { export * }
+}

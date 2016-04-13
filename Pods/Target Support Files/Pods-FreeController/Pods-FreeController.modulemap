@@ -1,0 +1,6 @@
+framework module Pods_FreeController {
+  umbrella header "Pods-FreeController-umbrella.h"
+
+  export *
+  module * { export * }
+}

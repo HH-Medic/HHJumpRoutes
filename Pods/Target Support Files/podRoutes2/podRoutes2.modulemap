@@ -1,0 +1,6 @@
+framework module podRoutes2 {
+  umbrella header "podRoutes2-umbrella.h"
+
+  export *
+  module * { export * }
+}
