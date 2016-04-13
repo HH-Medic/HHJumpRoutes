@@ -30,12 +30,12 @@ public protocol HHJumpProtocol
 
 public extension HHJumpProtocol where Self : UIViewController
 {
-    public func HHPresentViewController(current:UIViewController,moduleName:String,parameter:[String:String]?)
+    public func HHPresentViewController(current:UIViewController = self,moduleName:String,parameter:[String:String]?)
     {
         HHJumpViewController(current, moduleName: moduleName, parameter: parameter, type: HHRegisterType.Present)
     }
     
-    public func HHPushViewController(current:UIViewController,moduleName:String,parameter:[String:String]?)
+    public func HHPushViewController(current:UIViewController = self,moduleName:String,parameter:[String:String]?)
     {
         HHJumpViewController(current, moduleName: moduleName, parameter: parameter, type: HHRegisterType.push)
     }
