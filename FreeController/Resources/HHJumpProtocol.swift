@@ -23,9 +23,9 @@ public protocol HHJumpProtocol
     func HHPushViewController(current:UIViewController,moduleName:String,parameter:[String:String]?)
     
     /// 关闭当前控制器
-    func HHDismissViewController()
+//    func HHDismissViewController()
     
-    func HHPopViewController()
+//    func HHPopViewController()
 }
 
 public extension HHJumpProtocol where Self : UIViewController
@@ -43,8 +43,6 @@ public extension HHJumpProtocol where Self : UIViewController
     // open URL
     func HHJumpViewController(current:UIViewController,moduleName:String,parameter:[String:String]?,type:HHRegisterType)
     {
-        HHShareVCsAppend(current)
-        
         var header = HHScheme() + "://" + type.rawValue + "/" + moduleName
         
         if let aPara = parameter
@@ -55,21 +53,12 @@ public extension HHJumpProtocol where Self : UIViewController
         let url = NSURL(string:header)!
         UIApplication.sharedApplication().openURL(url)
     }
+
     
-    
-    
-    public func HHDismissViewController()
-    {
-        HHShareVCsRemoveLast(HHType)
-        self.dismissViewControllerAnimated(true, completion: nil)
-        
-    }
-    
-    public func HHPopViewController()
-    {
-        HHShareVCsRemoveLast(HHType)
-        self.navigationController?.popViewControllerAnimated(true)
-    }
+//    public func HHPopViewController()
+//    {
+//        self.navigationController?.popViewControllerAnimated(true)
+//    }
     
     func moduleName() ->String
     {

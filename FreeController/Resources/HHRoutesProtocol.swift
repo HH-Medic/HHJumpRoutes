@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import JLRoutes
+import HHJLRoutes
 
 public protocol HHRoutesProtocol {
     
@@ -22,8 +22,10 @@ public extension HHRoutesProtocol
     public func HHRegistPresent()
     {
         JLRoutes.addRoute("/\(HHRegisterType.Present.rawValue)/:to/:toVC/:key/:value") {
-            
-            HHShareViewController().presentViewController(self.createViewController($0), animated: true, completion: nil)
+            if let aVC = HHShareViewController()
+            {
+                aVC.presentViewController(self.createViewController($0), animated: true, completion: nil)
+            }
             return true
         }
     }
@@ -31,8 +33,10 @@ public extension HHRoutesProtocol
     public func HHRegisterPush()
     {
         JLRoutes.addRoute("/\(HHRegisterType.push.rawValue)/:to/:toVC/:key/:value") {
-            
-            HHShareViewController().navigationController?.pushViewController(self.createViewController($0), animated: true)
+            if let aVC = HHShareViewController()
+            {
+                aVC.navigationController?.pushViewController(self.createViewController($0), animated: true)
+            }
             return true
         }
     }

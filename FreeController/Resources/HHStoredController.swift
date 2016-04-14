@@ -14,7 +14,7 @@ public class HHStoredController {
     
     private init(){}
     
-    public var viewControllers = [UIViewController]()
+    public weak var viewController:UIViewController?
     
     public var rootScheme:String?
     
@@ -39,21 +39,12 @@ public func HHScheme() ->String
 }
 
 /// 保存的控制器堆栈
-public func HHShareViewController() -> UIViewController
+public func HHShareViewController() -> UIViewController?
 {
-    return HHStoredController.shareInstance.viewControllers.last!
+    return HHStoredController.shareInstance.viewController
 }
 
-public func HHShareVCsAppend(appendVC:UIViewController)
+public func HHShareDefault()
 {
-    HHStoredController.shareInstance.viewControllers.append(appendVC)
-}
-
-public func HHShareVCsRemoveLast(type:UIViewController.Type)
-{
-    if  type == HHShareViewController().dynamicType
-    {
-        HHStoredController.shareInstance.viewControllers.removeLast()
-    }
-    
+    HHStoredController.shareInstance.viewController = nil
 }
