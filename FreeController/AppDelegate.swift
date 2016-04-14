@@ -18,7 +18,8 @@ import JLRoutes
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-       SJRegisterPush()
+        SJAddScheme("SJJump")
+        SJRegisterPush()
         
         return true
     }
