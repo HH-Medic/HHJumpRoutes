@@ -6,7 +6,7 @@ target 'FreeController' do
 
 pod ‘podRoutes1’
 pod ‘podRoutes2’
-pod ‘JLRoutes’
+pod ‘HHJLRoutes’
 
 end
 

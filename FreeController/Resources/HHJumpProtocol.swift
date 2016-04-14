@@ -17,48 +17,31 @@ public protocol HHJumpProtocol
     /// - parameter current:    当前用于跳转的控制器
     /// - parameter moduleName: 需要跳转的module + 控制器名称
     /// - parameter parameter:  传参
-    func HHPresentViewController(current:UIViewController,moduleName:String,parameter:[String:String]?)
+    func HHPresentViewController(current:UIViewController,moduleName:String)
     
     // push
-    func HHPushViewController(current:UIViewController,moduleName:String,parameter:[String:String]?)
-    
-    /// 关闭当前控制器
-//    func HHDismissViewController()
-    
-//    func HHPopViewController()
+    func HHPushViewController(current:UIViewController,moduleName:String)
+
 }
 
 public extension HHJumpProtocol where Self : UIViewController
 {
-    public func HHPresentViewController(current:UIViewController,moduleName:String,parameter:[String:String]?)
+    public func HHPresentViewController(current:UIViewController,moduleName:String)
     {
-        HHJumpViewController(current, moduleName: moduleName, parameter: parameter, type: HHRegisterType.Present)
+        HHJumpViewController(current, moduleName: moduleName, type: HHRegisterType.Present)
     }
     
-    public func HHPushViewController(current:UIViewController,moduleName:String,parameter:[String:String]?)
+    public func HHPushViewController(current:UIViewController,moduleName:String)
     {
-        HHJumpViewController(current, moduleName: moduleName, parameter: parameter, type: HHRegisterType.push)
+        HHJumpViewController(current, moduleName: moduleName, type: HHRegisterType.push)
     }
     
     // open URL
-    func HHJumpViewController(current:UIViewController,moduleName:String,parameter:[String:String]?,type:HHRegisterType)
+    func HHJumpViewController(current:UIViewController,moduleName:String,type:HHRegisterType)
     {
-        var header = HHScheme() + "://" + type.rawValue + "/" + moduleName
-        
-        if let aPara = parameter
-        {
-            header += "/" + aPara.keys.first! + aPara.values.first!
-        }
-        
-        let url = NSURL(string:header)!
+        let url = NSURL(string:HHScheme() + "://" + type.rawValue + "/" + moduleName)!
         UIApplication.sharedApplication().openURL(url)
     }
-
-    
-//    public func HHPopViewController()
-//    {
-//        self.navigationController?.popViewControllerAnimated(true)
-//    }
     
     func moduleName() ->String
     {

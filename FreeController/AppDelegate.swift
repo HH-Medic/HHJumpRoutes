@@ -18,9 +18,7 @@ import JLRoutes
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-       
-        SJUpdateScheme("SJJump://jump")
-        SJAddPresentRoutes("jump")
+       SJRegisterPush()
         
         return true
     }

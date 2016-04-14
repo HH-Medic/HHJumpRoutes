@@ -19,12 +19,10 @@ JLRoutes is advanced URL parsing with a block-based callback API. It is designed
 * No dependencies other than Foundation
 
 ### Installation ###
-JLRoutes is available for installation via CocoaPods.
+JLRoutes is available for installation using CocoaPods or Carthage (add `github "joeldev/JLRoutes"` to your `Cartfile`).
 
 ### Requirements ###
-* ARC
-* iOS 5.0+ or OS X 10.7+
-* Foundation.framework
+* iOS 7.0+ or OS X 10.9+
 
 ### Simple Example ###
 ```objc
@@ -41,7 +39,7 @@ JLRoutes is available for installation via CocoaPods.
   return YES;
 }
 
-- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString *, id> *)options {
   return [JLRoutes routeURL:url];
 }
 ```
@@ -187,7 +185,7 @@ JLRoutes supports setting up routes with optional parameters. At the route regis
 
 ### License ###
 BSD 3-Clause License:
-> Copyright (c) 2015, Joel Levin. All rights reserved.
+> Copyright (c) 2016, Joel Levin. All rights reserved.
  
 > Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
  

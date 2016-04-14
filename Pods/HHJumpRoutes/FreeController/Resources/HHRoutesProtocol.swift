@@ -1,5 +1,5 @@
 //
-//  SJRoutesProtocol.swift
+//  HHRoutesProtocol.swift
 //  FreeController
 //
 //  Created by shmily on 16/4/1.
@@ -7,32 +7,36 @@
 //
 
 import UIKit
-import JLRoutes
+import HHJLRoutes
 
-public protocol SJRoutesProtocol {
+public protocol HHRoutesProtocol {
     
-    func SJRegistPresent()
-    func SJRegisterPush()
+    func HHRegistPresent()
+    func HHRegisterPush()
     
 }
 
 
-public extension SJRoutesProtocol
+public extension HHRoutesProtocol
 {
-    public func SJRegistPresent()
+    public func HHRegistPresent()
     {
-        JLRoutes.addRoute("/\(SJRegisterType.Present.rawValue)/:to/:toVC/:key/:value") {
-            
-            SJShareViewController().presentViewController(self.createViewController($0), animated: true, completion: nil)
+        JLRoutes.addRoute("/\(HHRegisterType.Present.rawValue)/:to/:toVC/:key/:value") {
+            if let aVC = HHShareViewController()
+            {
+                aVC.presentViewController(self.createViewController($0), animated: true, completion: nil)
+            }
             return true
         }
     }
     
-    public func SJRegisterPush()
+    public func HHRegisterPush()
     {
-        JLRoutes.addRoute("/\(SJRegisterType.push.rawValue)/:to/:toVC/:key/:value") {
-            
-            SJShareViewController().navigationController?.pushViewController(self.createViewController($0), animated: true)
+        JLRoutes.addRoute("/\(HHRegisterType.push.rawValue)/:to/:toVC/:key/:value") {
+            if let aVC = HHShareViewController()
+            {
+                aVC.navigationController?.pushViewController(self.createViewController($0), animated: true)
+            }
             return true
         }
     }

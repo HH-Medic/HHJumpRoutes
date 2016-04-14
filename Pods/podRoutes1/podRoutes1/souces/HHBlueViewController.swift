@@ -7,18 +7,14 @@
 //
 
 import UIKit
-import SJFreeController
+import HHJumpRoutes
 
-public class HHBlueViewController: UIViewController,SJJumpProtocol {
+public class HHBlueViewController: UIViewController,HHJumpProtocol {
     
     override public func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = UIColor.blueColor()
-        
-        let aLabel = UILabel(frame: CGRect.init(x: 50, y: 70, width: 350, height: 30))
-        aLabel.text = "第二个模块"
-        view.addSubview(aLabel)
         
         addBtn("关闭", action: #selector(HHBlueViewController.dismissViewController), x: 200)
     }
@@ -26,7 +22,7 @@ public class HHBlueViewController: UIViewController,SJJumpProtocol {
     
     func dismissViewController()
     {
-        SJDismissViewController()
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
     
     // 添加按钮
@@ -46,7 +42,7 @@ public class HHBlueViewController: UIViewController,SJJumpProtocol {
         print("HHBlueViewController dismiss")
     }
     
-    public var SJType: UIViewController.Type
+    public var HHType: UIViewController.Type
     {
         return self.dynamicType
     }

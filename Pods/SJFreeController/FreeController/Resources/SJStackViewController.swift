@@ -16,22 +16,30 @@ public class SJStackViewController {
     
     public var viewControllers = [UIViewController]()
     
-    public var schemePresnet:String?
+    public var rootScheme:String?
+    
 }
 
-public func SJUpdateScheme(schemePresent:String)
+public enum SJRegisterType:String
 {
-    SJStackViewController.shareInstance.schemePresnet = schemePresent
+    case Present = "/present"
+    case push = "/push"
 }
+
+
+public func SJAddScheme(scheme:String)
+{
+    SJStackViewController.shareInstance.rootScheme = scheme
+}
+
 
 public func SJScheme() ->String
 {
-    
-    return SJStackViewController.shareInstance.schemePresnet!
+    return SJStackViewController.shareInstance.rootScheme!
 }
 
 /// 保存的控制器堆栈
-public func SJShareViewControllers() -> UIViewController
+public func SJShareViewController() -> UIViewController
 {
     return SJStackViewController.shareInstance.viewControllers.last!
 }
@@ -43,7 +51,7 @@ public func SJShareVCsAppend(appendVC:UIViewController)
 
 public func SJShareVCsRemoveLast(type:UIViewController.Type)
 {
-    if  type == SJShareViewControllers().dynamicType
+    if  type == SJShareViewController().dynamicType
     {
         SJStackViewController.shareInstance.viewControllers.removeLast()
     }

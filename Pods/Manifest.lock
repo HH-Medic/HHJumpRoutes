@@ -1,22 +1,27 @@
 PODS:
-  - JLRoutes (1.5.5)
-  - podRoutes1 (0.0.8):
+  - HHJLRoutes (0.0.3)
+  - HHJumpRoutes (1.0.6):
+    - HHJLRoutes
+  - JLRoutes (1.6)
+  - podRoutes1 (0.1.0):
+    - HHJumpRoutes
+  - podRoutes2 (0.1.4):
+    - HHJLRoutes
     - SJFreeController
-  - podRoutes2 (0.1.3):
-    - JLRoutes
-    - SJFreeController
-  - SJFreeController (0.0.6):
+  - SJFreeController (1.0.0):
     - JLRoutes
 
 DEPENDENCIES:
-  - JLRoutes
+  - HHJLRoutes
   - podRoutes1
   - podRoutes2
 
 SPEC CHECKSUMS:
-  JLRoutes: d191a496b820f60d70225202d04289582da962df
-  podRoutes1: 83ee31bb25845ece0c87ed227cfe26647b9a502c
-  podRoutes2: 584200236f79a5833aa16ccddc403cfd5b84da49
-  SJFreeController: a03936ffc4d7a98408705be14c3704257af49142
+  HHJLRoutes: aa43dd0f52d996a31256cd0d7d42367a4ccc9e96
+  HHJumpRoutes: ae410035ed4ade8f6442f6019feea1297abbc076
+  JLRoutes: 435d791422e96c9b9b5e1c4db1aedb3ae1b1a08f
+  podRoutes1: 9b1ce348e6d1224b2493258e8c4bdb5cc52fda8a
+  podRoutes2: 5d25044a07918c81541469f47c376fe7b19a59d0
+  SJFreeController: 1e8841e45e0a5c2c4f4b19a2d1964cf35f8d660d
 
 COCOAPODS: 0.39.0

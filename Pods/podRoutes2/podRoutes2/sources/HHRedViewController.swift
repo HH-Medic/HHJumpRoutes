@@ -15,10 +15,6 @@ class HHRedViewController: UIViewController,SJJumpProtocol {
         super.viewDidLoad()
         view.backgroundColor = UIColor.redColor()
         
-        let aLabel = UILabel(frame: CGRect.init(x: 50, y: 70, width: 350, height: 30))
-        aLabel.text = "第一个模块，和第二个模块无耦合"
-        view.addSubview(aLabel)
-        
         addBtn("跳转控制器", action: #selector(HHRedViewController.jumpToBlue), x: 20)
         
         addBtn("关闭", action: #selector(HHRedViewController.dismissViewController), x: 200)
