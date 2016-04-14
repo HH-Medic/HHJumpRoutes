@@ -22,8 +22,8 @@ public class HHStoredController {
 
 public enum HHRegisterType:String
 {
-    case Present = "/present"
-    case push = "/push"
+    case Present = "present"
+    case push = "push"
 }
 
 
