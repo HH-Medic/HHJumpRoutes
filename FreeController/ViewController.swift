@@ -7,10 +7,10 @@
 //
 
 import UIKit
-import SJFreeController
+import HHJumpRoutes
 
 
-class ViewController: UIViewController,SJJumpProtocol {
+class ViewController: UIViewController,HHJumpProtocol {
 
     override func viewDidLoad()
     {
@@ -21,10 +21,10 @@ class ViewController: UIViewController,SJJumpProtocol {
     
     @IBAction func doJump2RedVC(sender: UIButton)
     {
-        SJPresentViewController(self,moduleName: "podRoutes2/HHRedViewController",parameter: nil)
+        HHPresentViewController(self, moduleName: "podRoutes2/HHRedViewController?aa=123&bb=234")
     }
     
-    var SJType: UIViewController.Type
+    var HHType: UIViewController.Type
     {
         return self.dynamicType
     }

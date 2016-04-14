@@ -21,7 +21,7 @@ public extension HHRoutesProtocol
 {
     public func HHRegistPresent()
     {
-        JLRoutes.addRoute("/\(HHRegisterType.Present.rawValue)/:to/:toVC/:key/:value") {
+        JLRoutes.addRoute("\(HHRegisterType.Present.rawValue)/:to/:toVC") {
             if let aVC = HHShareViewController()
             {
                 aVC.presentViewController(self.createViewController($0), animated: true, completion: nil)
@@ -32,7 +32,7 @@ public extension HHRoutesProtocol
     
     public func HHRegisterPush()
     {
-        JLRoutes.addRoute("/\(HHRegisterType.push.rawValue)/:to/:toVC/:key/:value") {
+        JLRoutes.addRoute("\(HHRegisterType.push.rawValue)/:to/:toVC") {
             if let aVC = HHShareViewController()
             {
                 aVC.navigationController?.pushViewController(self.createViewController($0), animated: true)
@@ -41,18 +41,22 @@ public extension HHRoutesProtocol
         }
     }
     
-    func createViewController(parameter: [NSObject: AnyObject]) -> UIViewController
+    func createViewController(parameter: NSDictionary) -> UIViewController
     {
-        let name = getParaVaule(parameter, key: "to")! + "." + getParaVaule(parameter, key: "toVC")!
+        let name = String(parameter["to"]!) + "." + String(parameter["toVC"]!)
         
         let mClass = NSClassFromString(name) as! UIViewController.Type
-        
         let aVC = mClass.init()
         
-        if let aKey = getParaVaule(parameter, key: "key")
+        if let value = parameter["kJLRoutesParameter"]
         {
-            aVC.setValue(getParaVaule(parameter, key: "value")!, forKey: aKey)
+            for para in value as! [[String:AnyObject]]
+            {
+                aVC.setValue(para[para.keys.first!], forKey: para.keys.first!)
+            }
+            
         }
+        
         return aVC
     }
     

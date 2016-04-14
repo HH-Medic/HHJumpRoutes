@@ -86,16 +86,8 @@ strip_invalid_archs() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-FreeController/HHJLRoutes.framework"
   install_framework "Pods-FreeController/HHJumpRoutes.framework"
-  install_framework "Pods-FreeController/JLRoutes.framework"
-  install_framework "Pods-FreeController/SJFreeController.framework"
-  install_framework "Pods-FreeController/podRoutes1.framework"
-  install_framework "Pods-FreeController/podRoutes2.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-FreeController/HHJLRoutes.framework"
   install_framework "Pods-FreeController/HHJumpRoutes.framework"
-  install_framework "Pods-FreeController/JLRoutes.framework"
-  install_framework "Pods-FreeController/SJFreeController.framework"
-  install_framework "Pods-FreeController/podRoutes1.framework"
-  install_framework "Pods-FreeController/podRoutes2.framework"
 fi

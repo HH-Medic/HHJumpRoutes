@@ -7,19 +7,19 @@
 //
 
 import UIKit
-import SJFreeController
-import JLRoutes
+import HHJumpRoutes
+import HHJLRoutes
 
 
-@UIApplicationMain class AppDelegate: UIResponder, UIApplicationDelegate,SJRoutesProtocol {
+@UIApplicationMain class AppDelegate: UIResponder, UIApplicationDelegate,HHRoutesProtocol {
 
     var window: UIWindow?
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
-        SJAddScheme("SJJump")
-        SJRegisterPush()
+        HHAddScheme("SJJump")
+        HHRegistPresent()
         
         return true
     }

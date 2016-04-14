@@ -21,7 +21,7 @@ public protocol HHJumpProtocol
     
     // push
     func HHPushViewController(current:UIViewController,moduleName:String)
-
+    
 }
 
 public extension HHJumpProtocol where Self : UIViewController
@@ -39,6 +39,7 @@ public extension HHJumpProtocol where Self : UIViewController
     // open URL
     func HHJumpViewController(current:UIViewController,moduleName:String,type:HHRegisterType)
     {
+        HHShareAddController(current) // 保存
         let url = NSURL(string:HHScheme() + "://" + type.rawValue + "/" + moduleName)!
         UIApplication.sharedApplication().openURL(url)
     }

@@ -44,6 +44,11 @@ public func HHShareViewController() -> UIViewController?
     return HHStoredController.shareInstance.viewController
 }
 
+public func HHShareAddController(controller:UIViewController)
+{
+    HHStoredController.shareInstance.viewController = controller
+}
+
 public func HHShareDefault()
 {
     HHStoredController.shareInstance.viewController = nil
