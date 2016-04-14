@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2A15D0C82252828FE8DDB7E4 /* Pods_FreeController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 272F6D9239F7604B3F29C614 /* Pods_FreeController.framework */; };
+		4638F37E1CBF9D9F0039908C /* HHRedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4638F37D1CBF9D9F0039908C /* HHRedViewController.swift */; };
+		4638F3801CBF9DD60039908C /* HHRedViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4638F37F1CBF9DD60039908C /* HHRedViewController.storyboard */; };
 		46A486AA1CAD7939000517B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A486A91CAD7939000517B3 /* AppDelegate.swift */; };
 		46A486AC1CAD7939000517B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A486AB1CAD7939000517B3 /* ViewController.swift */; };
 		46A486AF1CAD7939000517B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 46A486AD1CAD7939000517B3 /* Main.storyboard */; };
@@ -17,6 +19,8 @@
 
 /* Begin PBXFileReference section */
 		272F6D9239F7604B3F29C614 /* Pods_FreeController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FreeController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4638F37D1CBF9D9F0039908C /* HHRedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HHRedViewController.swift; sourceTree = "<group>"; };
+		4638F37F1CBF9DD60039908C /* HHRedViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = HHRedViewController.storyboard; sourceTree = "<group>"; };
 		46A486A61CAD7938000517B3 /* FreeController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FreeController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46A486A91CAD7939000517B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		46A486AB1CAD7939000517B3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +70,8 @@
 				46A486A91CAD7939000517B3 /* AppDelegate.swift */,
 				46A486AB1CAD7939000517B3 /* ViewController.swift */,
 				46A486AD1CAD7939000517B3 /* Main.storyboard */,
+				4638F37D1CBF9D9F0039908C /* HHRedViewController.swift */,
+				4638F37F1CBF9DD60039908C /* HHRedViewController.storyboard */,
 			);
 			path = FreeController;
 			sourceTree = "<group>";
@@ -169,6 +175,7 @@
 				46A486B41CAD7939000517B3 /* LaunchScreen.storyboard in Resources */,
 				46A486B11CAD7939000517B3 /* Assets.xcassets in Resources */,
 				46A486AF1CAD7939000517B3 /* Main.storyboard in Resources */,
+				4638F3801CBF9DD60039908C /* HHRedViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,6 +236,7 @@
 			files = (
 				46A486AC1CAD7939000517B3 /* ViewController.swift in Sources */,
 				46A486AA1CAD7939000517B3 /* AppDelegate.swift in Sources */,
+				4638F37E1CBF9D9F0039908C /* HHRedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

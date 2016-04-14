@@ -21,7 +21,7 @@ class ViewController: UIViewController,HHJumpProtocol {
     
     @IBAction func doJump2RedVC(sender: UIButton)
     {
-        HHPresentViewController(self, moduleName: "podRoutes2/HHRedViewController?aa=123&bb=234")
+        HHPresentViewController(self, moduleName: "FreeController/HHRedViewController?centerText=123")
     }
     
     var HHType: UIViewController.Type
