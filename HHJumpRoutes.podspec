@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "HHJumpRoutes"
-  s.version      = "1.0.2"
+  s.version      = "1.0.4"
   s.summary      = "解决多个组件之间通过URL scheme调用弹出控制器"
   s.homepage     = "https://github.com/HH-Medic/HHJumpRoutes"
   s.license      = "MIT"
@@ -12,6 +12,6 @@ Pod::Spec.new do |s|
 
   s.source_files  = "FreeController/Resources"
  
-  s.dependency "JLRoutes"
+  s.dependency "HHJLRoutes"
 
 end
